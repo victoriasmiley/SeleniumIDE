@@ -1,0 +1,260 @@
+{
+  "id": "127b3171-79c3-4cd1-b287-54f7bd801ae3",
+  "version": "2.0",
+  "name": "10 Minute E-mail",
+  "url": "https://10minutemail.net/",
+  "tests": [{
+    "id": "96e23451-c5cd-4d7b-888b-5f660f0d3970",
+    "name": "Adding 10 min",
+    "commands": [{
+      "id": "99cee08b-5d0b-48c2-8e45-2ac72936fd47",
+      "comment": "",
+      "command": "open",
+      "target": "https://10minutemail.net/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "8caa51c5-d2a9-46e7-805e-b97a59a8f604",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "882x708",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d4946ad2-5371-4e2e-99f1-2b61f302373e",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Дайте мне еще 10 минут!",
+      "targets": [
+        ["linkText=Дайте мне еще 10 минут!", "linkText"],
+        ["css=ul:nth-child(6) > li:nth-child(2) > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Дайте мне еще 10 минут!')]", "xpath:link"],
+        ["xpath=//div[@id='left']/ul/li[2]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'more.html')]", "xpath:href"],
+        ["xpath=//div[5]/ul/li[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,' Дайте мне еще 10 минут!')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "37ea2d1e-b927-4abc-a2c1-2795440f8ac3",
+    "name": "Reading an e-mail",
+    "commands": [{
+      "id": "1bcacdbe-f7b3-4362-bea0-a37fda6fd410",
+      "comment": "",
+      "command": "open",
+      "target": "https://10minutemail.net/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "7fa8a235-3142-4660-ba52-bbd3375c9c1c",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "882x708",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "49ddf334-4afa-43af-8cf3-5bc766abbe5a",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,233)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "843a85ae-124c-48b9-bd38-05d400319c39",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Привет, Добро пожаловать на 10-минутную почту!",
+      "targets": [
+        ["linkText=Привет, Добро пожаловать на 10-минутную почту!", "linkText"],
+        ["css=td:nth-child(2) > .row-link", "css:finder"],
+        ["xpath=//a[contains(text(),'Привет, Добро пожаловать на 10-минутную почту!')]", "xpath:link"],
+        ["xpath=//table[@id='maillist']/tbody/tr[2]/td[2]/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, 'readmail.html?mid=welcome')])[2]", "xpath:href"],
+        ["xpath=//td[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Привет, Добро пожаловать на 10-минутную почту!')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "b06d2554-43f8-4486-bb22-7a420c583657",
+      "comment": "",
+      "command": "click",
+      "target": "css=.emoji_parse",
+      "targets": [
+        ["css=.emoji_parse", "css:finder"],
+        ["xpath=//div[@id='readmail']/div/div/div/h2", "xpath:idRelative"],
+        ["xpath=//div[4]/div/div/div/h2", "xpath:position"],
+        ["xpath=//h2[contains(.,'Привет, Добро пожаловать на 10-минутную почту!')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "3846c4dd-df2b-4a1a-9007-4da13460c69a",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=.emoji_parse",
+      "targets": [
+        ["css=.emoji_parse", "css:finder"],
+        ["xpath=//div[@id='readmail']/div/div/div/h2", "xpath:idRelative"],
+        ["xpath=//div[4]/div/div/div/h2", "xpath:position"],
+        ["xpath=//h2[contains(.,'Привет, Добро пожаловать на 10-минутную почту!')]", "xpath:innerText"]
+      ],
+      "value": "Привет, Добро пожаловать на 10-минутную почту!"
+    }]
+  }, {
+    "id": "c3281657-e9e1-4bda-814c-48eb6e83c2dc",
+    "name": "Changing Language",
+    "commands": [{
+      "id": "fcda220e-ccc8-4aa4-b026-729706411200",
+      "comment": "",
+      "command": "open",
+      "target": "https://10minutemail.net/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "af756b30-cbad-4898-8797-8e486f3a9120",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "882x708",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ad42a097-7b48-41e7-a00b-c9329124918e",
+      "comment": "",
+      "command": "click",
+      "target": "id=lang_select",
+      "targets": [
+        ["id=lang_select", "id"],
+        ["name=lang", "name"],
+        ["css=#lang_select", "css:finder"],
+        ["xpath=//select[@id='lang_select']", "xpath:attributes"],
+        ["xpath=//form[@id='lang_select_form']/select", "xpath:idRelative"],
+        ["xpath=//select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "1fa5234b-5de5-4686-aea4-9b58b441dd8a",
+      "comment": "",
+      "command": "select",
+      "target": "id=lang_select",
+      "targets": [],
+      "value": "label=беларускі"
+    }, {
+      "id": "05e5d70d-07ff-449d-a8d1-81567f4547e5",
+      "comment": "",
+      "command": "click",
+      "target": "css=#left > .h-line",
+      "targets": [
+        ["css=#left > .h-line", "css:finder"],
+        ["xpath=//div[@id='left']/h2", "xpath:idRelative"],
+        ["xpath=//h2", "xpath:position"],
+        ["xpath=//h2[contains(.,'Запрашаем!')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "766f26be-cbdc-4603-90cb-6fceea9c7ada",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=#left > .h-line",
+      "targets": [
+        ["css=#left > .h-line", "css:finder"],
+        ["xpath=//div[@id='left']/h2", "xpath:idRelative"],
+        ["xpath=//h2", "xpath:position"],
+        ["xpath=//h2[contains(.,'Запрашаем!')]", "xpath:innerText"]
+      ],
+      "value": "Запрашаем!"
+    }]
+  }, {
+    "id": "d0c5d82b-e290-4dad-a131-1561035b4087",
+    "name": "Creating New e-mail",
+    "commands": [{
+      "id": "b2a0a44b-a367-4bd9-94fb-4c73bcaf1479",
+      "comment": "",
+      "command": "open",
+      "target": "https://10minutemail.net/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6bbca01b-6695-4e3c-be01-26983157b5dd",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "882x708",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a16fdcf7-4e18-495f-949d-85de2a03bead",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Атрымаць іншую паштовую скрыню. (Бягучая скрыня будзе выдалена).",
+      "targets": [
+        ["linkText=Атрымаць іншую паштовую скрыню. (Бягучая скрыня будзе выдалена).", "linkText"],
+        ["css=li:nth-child(3) > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Атрымаць іншую паштовую скрыню. (Бягучая скрыня будзе выдалена).')]", "xpath:link"],
+        ["xpath=//div[@id='left']/ul/li[3]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'new.html')]", "xpath:href"],
+        ["xpath=//li[3]/a", "xpath:position"],
+        ["xpath=//a[contains(.,' Атрымаць іншую паштовую скрыню. (Бягучая скрыня будзе выдалена).')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "c2776a3b-0fb7-4033-a4b0-7292189a935b",
+    "name": "Restore Previous E-mail and Switching Language",
+    "commands": [{
+      "id": "9625381a-ca6a-40b3-8a71-577956f9f796",
+      "comment": "",
+      "command": "open",
+      "target": "https://10minutemail.net/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "9c9e4f1d-0871-426b-8943-a74219a43455",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "882x708",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "8bead624-75b7-46e1-87a0-b43ec701cf36",
+      "comment": "",
+      "command": "click",
+      "target": "css=a > .fa-undo",
+      "targets": [
+        ["css=a > .fa-undo", "css:finder"],
+        ["xpath=//div[@id='left']/ul/li[4]/a/i", "xpath:idRelative"],
+        ["xpath=//li[4]/a/i", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "773d6948-bda5-4071-af13-2c08c18ee704",
+      "comment": "",
+      "command": "click",
+      "target": "id=lang_select",
+      "targets": [
+        ["id=lang_select", "id"],
+        ["name=lang", "name"],
+        ["css=#lang_select", "css:finder"],
+        ["xpath=//select[@id='lang_select']", "xpath:attributes"],
+        ["xpath=//form[@id='lang_select_form']/select", "xpath:idRelative"],
+        ["xpath=//select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "ba34068a-3923-46ad-b5a9-26a99b424cf8",
+      "comment": "",
+      "command": "select",
+      "target": "id=lang_select",
+      "targets": [],
+      "value": "label=Русский язык"
+    }]
+  }],
+  "suites": [{
+    "id": "bd906d0c-b744-4591-8ab2-a8700471c493",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["37ea2d1e-b927-4abc-a2c1-2795440f8ac3", "96e23451-c5cd-4d7b-888b-5f660f0d3970", "c3281657-e9e1-4bda-814c-48eb6e83c2dc", "d0c5d82b-e290-4dad-a131-1561035b4087", "c2776a3b-0fb7-4033-a4b0-7292189a935b"]
+  }],
+  "urls": ["https://www.google.by/", "https://10minutemail.net/"],
+  "plugins": []
+}
